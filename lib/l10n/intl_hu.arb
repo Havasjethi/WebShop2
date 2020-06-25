@@ -1,0 +1,57 @@
+{
+  "@@last_modified": "2020-06-21T22:36:09.895534",
+  "webshop": "webáruház",
+  "@webshop": {
+    "description": "Appbar webshop",
+    "type": "text",
+    "placeholders": {}
+  },
+  "browse": "Böngészés",
+  "@browse": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "orders": "Rendelések",
+  "@orders": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Profil",
+  "@profile": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "colors": "Választható színek",
+  "@colors": {
+    "description": "Text for color",
+    "type": "text",
+    "placeholders": {}
+  },
+  "addToCart": "Hozzáadás",
+  "@addToCart": {
+    "description": "Literally",
+    "type": "text",
+    "placeholders": {}
+  },
+  "order": "Rendelés feladása",
+  "@order": {
+    "description": "Order cart items",
+    "type": "text",
+    "placeholders": {}
+  },
+  "suspect": "Vizsgálás",
+  "@suspect": {
+    "description": "Suspect item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "price": "Ár",
+  "@price": {
+    "description": "Price of an item",
+    "type": "text",
+    "placeholders": {}
+  }
+}

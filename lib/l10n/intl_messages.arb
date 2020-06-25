@@ -1,0 +1,57 @@
+{
+  "@@last_modified": "2020-06-22T14:14:51.267638",
+  "webshop": "webshop",
+  "@webshop": {
+    "description": "Appbar webshop",
+    "type": "text",
+    "placeholders": {}
+  },
+  "browse": "Browse",
+  "@browse": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "orders": "Orders",
+  "@orders": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Homepage option",
+    "type": "text",
+    "placeholders": {}
+  },
+  "colors": "Colors",
+  "@colors": {
+    "description": "Text for color",
+    "type": "text",
+    "placeholders": {}
+  },
+  "addToCart": "Add to cart",
+  "@addToCart": {
+    "description": "Literally",
+    "type": "text",
+    "placeholders": {}
+  },
+  "order": "Order",
+  "@order": {
+    "description": "Order cart items",
+    "type": "text",
+    "placeholders": {}
+  },
+  "suspect": "Suspect",
+  "@suspect": {
+    "description": "Suspect item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "price": "Price",
+  "@price": {
+    "description": "Price of an item",
+    "type": "text",
+    "placeholders": {}
+  }
+}
