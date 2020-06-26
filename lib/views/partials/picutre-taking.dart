@@ -77,10 +77,8 @@ class PictureTakeViewState extends State<PictureTakeView> {
 //            );
           } catch (e) {
             // If an error occurs, log the error to the console.
-            print(e);
+            print('Error: $e');
           }
-
-
         },
       ),
 

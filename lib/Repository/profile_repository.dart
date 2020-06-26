@@ -16,6 +16,14 @@ class ProfileRepository extends Sql {
         .then((value) => value.first);
   }
 
+  void setUsername (String username, int id) async {
+    (await db).execute('''
+      Update $profileTable
+      SET username='$username'
+      Where id=$id;
+    ''');
+  }
+
   Future<String> getUserImagePath () async {
     (await db).query(
       profileTable,

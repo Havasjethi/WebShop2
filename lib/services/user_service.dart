@@ -16,15 +16,12 @@ class UserService with ChangeNotifier {
 
     _profileRepository.getRawUserData()
       .then((rawData) {
-        print("Meh");
+        print("Go user from database $rawData");
         this._user = User (rawData['id'], rawData['username']);
         print("this._user: ${this._user}");
-      }).catchError(() {
-        print('Gecu bagy ads');
-        throw Error;
-      })
-        .whenComplete(() => print("this is happened"));
-    ;
+      }).catchError((e) {
+        this._user = User (1, 'Anonym');
+      });
 
     _profileRepository.getUserImagePath()
         .then((path) => this._userImagePath = path);
@@ -33,8 +30,15 @@ class UserService with ChangeNotifier {
   User get getUser => _user;
   String get getImagePath => _userImagePath;
 
+  void setUsername (String username) {
+    _user.username = username;
+    _profileRepository.setUsername(username, _user.id);
+    notifyListeners();
+  }
+
   User setUser (User user){
     _user = user;
+    notifyListeners();
     return _user;
   }
 

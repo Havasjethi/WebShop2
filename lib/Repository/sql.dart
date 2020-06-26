@@ -40,7 +40,8 @@ abstract class Sql {
             CREATE TABLE IF NOT EXISTS $cartTable (
             id INTEGER,
             color Text,
-            amount Integer
+            amount Integer,
+            PRIMARY KEY (id, color)
             );
             '''
           );
@@ -55,15 +56,11 @@ abstract class Sql {
           '''
           ).then((value) {
             db.query(profileTable).then((value) {
-              if (value == null) {
-                // TODO :: FINISH STATEMENT ( insert default user ) 
-//                db.execute('Insert into ')
+              if (value.length == 0) {
+                db.execute('''Insert into $profileTable (id, username) values (1, 'anonym');''');
               }
-              print(value);
             });
           });
-          print('TABLE CREATED -- PROFILE');
-          //           Insert into $profileTable (id, username) values (1, 'anonym');
       }
     );
   }

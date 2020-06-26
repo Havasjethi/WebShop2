@@ -16,7 +16,6 @@ class Suspect extends StatelessWidget {
 //    Item item = ModalRoute.of(context).settings.arguments;
     final Item item = ModalRoute.of(context).settings.arguments;
     final size = MediaQuery.of(context).size.width * .65;
-    final faszom = const Color(0xFFAABBFF);
 
     return Scaffold (
       appBar: AppBar(
@@ -41,7 +40,7 @@ class Suspect extends StatelessWidget {
             ),
             Container (
               padding: EdgeInsets.all(6),
-              color: faszom,
+              color: const Color(0xFFAABBFF),
               alignment: Alignment.centerLeft,
               child: Text("${item.name}",
                   style: TextStyle(

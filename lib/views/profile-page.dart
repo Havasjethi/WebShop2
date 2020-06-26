@@ -3,8 +3,10 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:havaswebshop/model/user.dart';
 import 'package:havaswebshop/services/index.dart';
 import 'package:havaswebshop/views/image_controller.dart';
+import 'package:havaswebshop/views/partials/name_change_dialog.dart';
 import 'package:provider/provider.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -65,8 +67,36 @@ class ProfilePage extends StatelessWidget {
           ),
           Consumer<UserService>(
             builder: (context, service, child) {
-              print(service.getUser);
-              return Text('asd');
+              User user = service.getUser;
+//              print(("This is what i got: ${service.getUser}"));
+//              return Text("Name: ${user.username ?? 'Error occured'}");
+              return Container (
+                width: 150,
+                child: Stack(
+                  children: <Widget>[
+                    Text("${user.username}"),
+                    Positioned (
+                      bottom: 0,
+                      right: 0,
+                      child: GestureDetector(
+                        onTap: () {
+                          var dialog = nameChangeDialog(context, user.username);
+                          showDialog<String>(
+                              context: context,
+                              // ignore: deprecated_member_use
+                              child: dialog
+                          ).then((String value) {
+                            if (value.length > 0) {
+                              service.setUsername(value);
+                            }
+                          });
+                        },
+                        child: Icon(Icons.edit),
+                      ),
+                    )
+                  ],
+                ),
+              );
           },
           ),
         ],
