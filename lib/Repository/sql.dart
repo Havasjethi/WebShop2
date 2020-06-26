@@ -46,7 +46,7 @@ abstract class Sql {
             '''
           );
           db.execute(
-            '''
+          '''
           CREATE TABLE IF NOT EXISTS $profileTable (
               id Integer,
               username text,
