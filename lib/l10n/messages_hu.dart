@@ -23,12 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "addToCart" : MessageLookupByLibrary.simpleMessage("Hozzáadás"),
     "browse" : MessageLookupByLibrary.simpleMessage("Böngészés"),
+    "cancel" : MessageLookupByLibrary.simpleMessage("Mégse"),
+    "cart" : MessageLookupByLibrary.simpleMessage("Kosár"),
+    "changeName" : MessageLookupByLibrary.simpleMessage("Név változtats"),
     "colors" : MessageLookupByLibrary.simpleMessage("Választható színek"),
+    "finishOrderInfo" : MessageLookupByLibrary.simpleMessage("Biztos vagy benne, hogy feladod a rendelést?"),
+    "ok" : MessageLookupByLibrary.simpleMessage("Ok"),
     "order" : MessageLookupByLibrary.simpleMessage("Rendelés feladása"),
     "orders" : MessageLookupByLibrary.simpleMessage("Rendelések"),
     "price" : MessageLookupByLibrary.simpleMessage("Ár"),
     "profile" : MessageLookupByLibrary.simpleMessage("Profil"),
     "suspect" : MessageLookupByLibrary.simpleMessage("Vizsgálás"),
+    "total" : MessageLookupByLibrary.simpleMessage("Összesen"),
     "webshop" : MessageLookupByLibrary.simpleMessage("webáruház")
   };
 }

@@ -2,10 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:havaswebshop/image-factory.dart';
+import 'package:havaswebshop/l10n/MyLocale.dart';
 import 'package:havaswebshop/services/cart_service.dart';
 import 'package:havaswebshop/model/item.dart';
-import 'package:havaswebshop/services/index.dart';
 import 'package:havaswebshop/services/order_service.dart';
+import 'package:havaswebshop/services/user_service.dart';
 import 'package:havaswebshop/utils/list-creator.dart';
 import 'package:havaswebshop/views/partials/finish_order_dialog.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +20,7 @@ class CartPage extends StatelessWidget {
     ? Column (
         children: <Widget>[
           Text ("No items found in your cart"),
-          FlatButton (
+          RaisedButton (
             child: Text ("Browse items"),
             onPressed: () => Navigator.popAndPushNamed(ctx, 'browse'),
           )
@@ -40,35 +41,38 @@ class CartPage extends StatelessWidget {
     final phoneWidth = MediaQuery.of(context).size.width;
 
     return Scaffold (
-      appBar: AppBar (title: Text("asd")),
-      persistentFooterButtons: <Widget>[
-        Text("Total:"),
+      appBar: AppBar (
+        title: Text(WebshopLocalizations.of(context).cart)
+      ),
+
+      persistentFooterButtons: Provider.of<CartService>(context).getItems.length == 0 ? [] : <Widget>[
+        Text("${WebshopLocalizations.of(context).total}:"),
         Consumer<CartService>(builder: (context, service, child) {
           int total = service.calculatePriceFormItems(service.getItems);
           return Text("$total");
         }),
         RaisedButton (
           onPressed: () async {
-
-          showDialog(
-            context: context,
-            child: finishOrderDialog(context)
-          ).then((result) {
-            if (result) {
-              var service = Provider.of<CartService>(context);
-              List<CartItem> items = service.getItems;
-              Provider.of<OrderService>(context).placeOrder(
-                Provider.of<UserService>(context).getUser,
-                items
-              );
-              service.clear();
-            }
-          });
+            showDialog<bool>(
+              context: context,
+              child: finishOrderDialog(context)
+            ).then((result) {
+              if (result) {
+                var service = Provider.of<CartService>(context);
+                List<CartItem> items = service.getItems;
+                Provider.of<OrderService>(context).placeOrder(
+                  Provider.of<UserService>(context).getUser,
+                  items
+                );
+                service.clear();
+              }
+            });
           },
           child: Text("Palce order"),
         )
       ],
       body: Container (
+        width: double.infinity,
         child: Column (
         children: <Widget>[
           Expanded (
@@ -83,9 +87,8 @@ class CartPage extends StatelessWidget {
 
 class CartItemDisplay extends StatelessWidget {
   CartItem _item;
-
-
   CartItemDisplay( this._item );
+
   @override
   Widget build(BuildContext context) {
     final phoneWidth = MediaQuery.of(context).size.width;
@@ -104,7 +107,7 @@ class CartItemDisplay extends StatelessWidget {
             child: Column (
               children: <Widget>[
                 Text(
-                    "Total: ${_item.amount * _item.item.price}",
+                    "${WebshopLocalizations.of(context).total}: ${_item.amount * _item.item.price}",
                   style: TextStyle(
                     fontWeight: FontWeight.bold
                   ),
@@ -113,7 +116,6 @@ class CartItemDisplay extends StatelessWidget {
               ],
             )
         )
-
       ],
     );
   }

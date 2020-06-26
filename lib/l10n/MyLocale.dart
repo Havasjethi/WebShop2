@@ -105,12 +105,58 @@ class WebshopLocalizations {
       locale: localeName,
     );
   }
+
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: 'Title of cart page',
+      locale: localeName,
+    );
+  }
+
+  String get cancel  {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: 'Cancel a dialog',
+      locale: localeName,
+    );
+  }
+
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: 'Ok Dialog',
+      locale: localeName,
+    );
+  }
+
+  String get finishOrderInfo  {
+    return Intl.message(
+      'Are you sure you want to place your order?',
+      name: 'finishOrderInfo',
+      desc: 'Bla bla',
+      locale: localeName,
+    );
+  }
+
+  String get changeName {
+    return Intl.message(
+      'Change name',
+      name: 'changeName',
+      desc: 'Name change dialog title',
+      locale: localeName,
+    );
+  }
+
+  String get edit  {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: 'name change dialog',
+      locale: localeName,
+    );
+  }
 }
-
-
-//Future initializeMessages(String localeName) async {
-//  var lib = _deferredLibraries[Intl.canonicalizedLocale(localeName)];
-//  await (lib == null ? Future.value(false) : lib());
-//  initializeInternalMessageLookup(() => CompositeMessageLookup());
-//  messageLookup.addLocale(localeName, _findGeneratedMessagesFor);
-//}

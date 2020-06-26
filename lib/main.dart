@@ -16,13 +16,11 @@ import 'package:provider/provider.dart';
 
 import 'Repository/profile_repository.dart';
 
-CameraDescription _cameraDescription;
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   final cameras = await availableCameras();
   final firstCamera = cameras.first;
-  _cameraDescription = firstCamera;
 
   CartRepository cartRepository = CartRepository();
   ProfileRepository profileRepository = ProfileRepository();
@@ -49,7 +47,8 @@ class Webshop extends StatelessWidget {
   Widget build (BuildContext context ) {
     return MaterialApp (
       theme: ThemeData (
-        primaryColor: Colors.deepPurpleAccent
+        primaryColor: Colors.deepPurpleAccent,
+        buttonColor: Colors.greenAccent
       ),
       initialRoute: '/',
       routes: {
@@ -58,12 +57,9 @@ class Webshop extends StatelessWidget {
         'browse/suspect': (_) => Suspect(), // Might be better via id
         'cart': (_) => CartPage(),
         'orders': (_) => Orders(),
-//        'orders': (BuildContext ctx) => Orders(ctx),
         'profile': (_) => ProfilePage()
-//        'profile': (_) => TakePictureScreen(camera: _cameraDescription)
       },
       localizationsDelegates: [
-//        Provider.of<WebshopLocalizationsDelegate>(context),
         const WebshopLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate

@@ -23,12 +23,19 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "addToCart" : MessageLookupByLibrary.simpleMessage("Add to cart"),
     "browse" : MessageLookupByLibrary.simpleMessage("Browse"),
+    "cancel" : MessageLookupByLibrary.simpleMessage("Cancel"),
+    "cart" : MessageLookupByLibrary.simpleMessage("Cart"),
+    "changeName" : MessageLookupByLibrary.simpleMessage("Change name"),
     "colors" : MessageLookupByLibrary.simpleMessage("Colors"),
+    "edit" : MessageLookupByLibrary.simpleMessage("Edit"),
+    "finishOrderInfo" : MessageLookupByLibrary.simpleMessage("Are you sure you want to place your order?"),
+    "ok" : MessageLookupByLibrary.simpleMessage("Ok"),
     "order" : MessageLookupByLibrary.simpleMessage("Order"),
     "orders" : MessageLookupByLibrary.simpleMessage("Orders"),
     "price" : MessageLookupByLibrary.simpleMessage("Price"),
     "profile" : MessageLookupByLibrary.simpleMessage("Profile"),
     "suspect" : MessageLookupByLibrary.simpleMessage("Suspect"),
+    "total" : MessageLookupByLibrary.simpleMessage("Total"),
     "webshop" : MessageLookupByLibrary.simpleMessage("webshop")
   };
 }

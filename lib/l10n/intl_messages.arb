@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-06-22T14:14:51.267638",
+  "@@last_modified": "2020-06-26T14:31:38.616427",
   "webshop": "webshop",
   "@webshop": {
     "description": "Appbar webshop",
@@ -51,6 +51,48 @@
   "price": "Price",
   "@price": {
     "description": "Price of an item",
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "Total",
+  "@total": {
+    "description": "Total",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cart": "Cart",
+  "@cart": {
+    "description": "Title of cart page",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel a dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ok": "Ok",
+  "@ok": {
+    "description": "Ok Dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "finishOrderInfo": "Are you sure you want to place your order?",
+  "@finishOrderInfo": {
+    "description": "Bla bla",
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeName": "Change name",
+  "@changeName": {
+    "description": "Name change dialog title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "name change dialog",
     "type": "text",
     "placeholders": {}
   }

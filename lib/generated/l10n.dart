@@ -122,6 +122,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: 'Total',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: 'Title of cart page',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: 'Cancel a dialog',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: 'Ok Dialog',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to place your order?`
+  String get finishOrderInfo {
+    return Intl.message(
+      'Are you sure you want to place your order?',
+      name: 'finishOrderInfo',
+      desc: 'Bla bla',
+      args: [],
+    );
+  }
+
+  /// `Change name`
+  String get changeName {
+    return Intl.message(
+      'Change name',
+      name: 'changeName',
+      desc: 'Name change dialog title',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: 'name change dialog',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

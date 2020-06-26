@@ -53,5 +53,47 @@
     "description": "Price of an item",
     "type": "text",
     "placeholders": {}
+  },
+  "total": "Összesen",
+  "@total": {
+    "description": "Total",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cart": "Kosár",
+  "@cart": {
+    "description": "Title of cart page",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "Mégse",
+  "@cancel": {
+    "description": "Cancel a dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ok": "Ok",
+  "@ok": {
+    "description": "Ok Dialog",
+    "type": "text",
+    "placeholders": {}
+  },
+  "finishOrderInfo": "Biztos vagy benne, hogy feladod a rendelést?",
+  "@finishOrderInfo": {
+    "description": "Bla bla",
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeName": "Név változtats",
+  "@changeName": {
+    "description": "Name change dialog title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "edit": "Meg változtat",
+  "@edit": {
+    "description": "name change dialog",
+    "type": "text",
+    "placeholders": {}
   }
 }

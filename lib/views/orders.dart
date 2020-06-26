@@ -12,7 +12,7 @@ class Orders extends StatelessWidget {
       ),
       body: Column (
         children: <Widget>[
-          Text ("asd")
+          Text ("Under construction..")
         ],
       ),
     );
